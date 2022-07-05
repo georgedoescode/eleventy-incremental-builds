@@ -63,6 +63,8 @@ module.exports = () => {
           `${CACHE_DIR}/posts/${post.slug}/`,
           `_site/blog/${post.slug}`
         );
+
+        console.log(fs.readdirSync("./_site"));
       }
     }
 
