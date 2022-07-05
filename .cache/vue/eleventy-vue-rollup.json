@@ -1,0 +1,11 @@
+{
+  "vueToJs": {
+    "./blog-post.vue": "blog-post.js"
+  },
+  "relationships": [
+    {
+      "from": "blog-post.js",
+      "to": "blog-post.vue_rollup-plugin-vue_script.js"
+    }
+  ]
+}
