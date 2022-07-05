@@ -3,7 +3,7 @@ const posts = [
     _id: "0",
     title: "Blog Post 1",
     slug: "/blog-post-1/",
-    lastUpdated: "2021-01-04",
+    lastUpdated: "2021-01-05",
   },
   {
     _id: "1",

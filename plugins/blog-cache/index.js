@@ -14,7 +14,7 @@ module.exports = {
   // Does not do anything if:
   //  - the directory does not exist
   async onPostBuild({ utils }) {
-    console.log(fs.readdirSync("_site"));
+    console.log(fs.readdirSync("_site/blog"));
     await utils.cache.save("./_blog-cache");
   },
 };
