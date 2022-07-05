@@ -29,6 +29,12 @@ const posts = [
     slug: "/blog-post-5/",
     lastUpdated: "2021-01-01",
   },
+  {
+    _id: "5",
+    title: "Blog Post 6",
+    slug: "/blog-post-6/",
+    lastUpdated: "2021-01-01",
+  },
 ];
 
 function getPosts() {

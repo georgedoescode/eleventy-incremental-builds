@@ -48,7 +48,7 @@ module.exports = () => {
     const postsThatNeedToUpdate = [];
 
     for (const post of newData.posts) {
-      const cachedPost = blogCache.posts.find((p) => (p._id = post._id));
+      const cachedPost = blogCache.posts.find((p) => p._id === post._id);
 
       // If the post is not yet cached, or has been updated more recently than the cached version, render it again
       if (
@@ -57,6 +57,7 @@ module.exports = () => {
       ) {
         postsThatNeedToUpdate.push(post);
       } else {
+        console.log("Attempting to copy...");
         // This post has not updated, restore it from the Netlify cache
         fse.copySync(
           `${CACHE_DIR}/posts/${post.slug}/`,
