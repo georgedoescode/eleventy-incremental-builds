@@ -10,12 +10,15 @@
     <body>
       <main>
         <h1>{{ post.title }}</h1>
+        <p>This post took {{ bigNumber.ms }}ms to render!</p>
       </main>
     </body>
   </html>
 </template>
 
 <script>
+import fibonacci from "fibonacci";
+
 export default {
   data() {
     return {
@@ -25,6 +28,7 @@ export default {
         alias: "post",
       },
       permalink: (data) => `blog/${data.post.slug}/index.html`,
+      bigNumber: fibonacci.iterate(4000),
     };
   },
 };
