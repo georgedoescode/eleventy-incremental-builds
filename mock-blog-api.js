@@ -1,9 +1,9 @@
 const posts = [
   {
     _id: "0",
-    title: "Blog Post 1",
+    title: "Blog Post 1 - Updated Title",
     slug: "/blog-post-1/",
-    lastUpdated: "2021-01-06",
+    lastUpdated: "2021-01-07",
   },
   {
     _id: "1",
@@ -39,6 +39,12 @@ const posts = [
     _id: "6",
     title: "Blog Post 7",
     slug: "/blog-post-7/",
+    lastUpdated: "2021-01-01",
+  },
+  {
+    _id: "7",
+    title: "Blog Post 8",
+    slug: "/blog-post-8/",
     lastUpdated: "2021-01-01",
   },
 ];
