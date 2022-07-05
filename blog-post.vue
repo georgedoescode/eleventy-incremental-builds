@@ -11,7 +11,7 @@
       <main>
         <h1>{{ post.title }}</h1>
         <p>This post took {{ bigNumber.ms }}ms to render!</p>
-        <p>Test 1</p>
+        <p>Test 2</p>
       </main>
     </body>
   </html>
