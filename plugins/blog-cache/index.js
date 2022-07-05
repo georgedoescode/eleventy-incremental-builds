@@ -3,6 +3,7 @@ const fse = require("fs-extra");
 
 module.exports = {
   async onPreBuild({ utils, git }) {
+    // TODO - can we use modifiedFiles here to determine wether we should do a full rebuild?
     console.log(utils.git.modifiedFiles);
     await utils.cache.restore("./_blog-cache");
   },
