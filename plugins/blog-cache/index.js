@@ -19,6 +19,8 @@ module.exports = {
   async onPostBuild({ utils }) {
     console.log("RUNNING POST BUILD");
 
+    console.log(fs.readdirSync("./_site"));
+
     fse.copySync("./_site/blog", "./_blog-cache/posts");
 
     await utils.cache.save("./_blog-cache");
