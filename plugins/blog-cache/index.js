@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 module.exports = {
   // Before the build runs,
   // restore a directory we cached in a previous build.
@@ -12,6 +14,7 @@ module.exports = {
   // Does not do anything if:
   //  - the directory does not exist
   async onPostBuild({ utils }) {
+    console.log(fs.readdirSync("_site"));
     await utils.cache.save("./_blog-cache");
   },
 };
