@@ -3,7 +3,7 @@ const fse = require("fs-extra");
 
 module.exports = {
   async onPreBuild({ utils, git }) {
-    console.log(git);
+    console.log(utils.git.modifiedFiles);
     await utils.cache.restore("./_blog-cache");
   },
 
