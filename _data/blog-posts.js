@@ -1,5 +1,5 @@
 const fs = require("fs");
-const unionBy = require("lodash/unionBy");
+const fse = require("fs-extra");
 const { getPosts } = require("../mock-blog-api");
 
 const CACHE_DIR = "_blog-cache";
@@ -50,8 +50,19 @@ module.exports = () => {
     for (const post of newData.posts) {
       const cachedPost = blogCache.posts.find((p) => (p._id = post._id));
 
-      if (new Date(post.lastUpdated) > new Date(cachedPost.lastUpdated)) {
+      // If the post is not yet cached, or has been updated more recently than the cached version, render it again
+      if (
+        !cachedPost ||
+        new Date(post.lastUpdated) > new Date(cachedPost.lastUpdated)
+      ) {
         postsThatNeedToUpdate.push(post);
+      } else {
+        console.log("running");
+        // This post has not updated, restore it from the Netlify cache
+        fse.copySync(
+          `${CACHE_DIR}/posts/${post.slug}/`,
+          `_site/blog/${post.slug}`
+        );
       }
     }
 

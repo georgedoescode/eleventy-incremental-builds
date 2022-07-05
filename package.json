@@ -15,6 +15,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-vue": "^0.7.3",
     "fibonacci": "^1.6.10",
+    "fs-extra": "^10.1.0",
     "lodash": "^4.17.21"
   }
 }
