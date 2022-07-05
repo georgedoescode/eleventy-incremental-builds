@@ -6,7 +6,7 @@ module.exports = {
     // TODO - can we use modifiedFiles here to determine wether we should do a full rebuild?
     console.log(utils.git.modifiedFiles);
 
-    if (!utils.git.modifiedFiles.contains("blog-post.vue")) {
+    if (!utils.git.modifiedFiles.includes("blog-post.vue")) {
       await utils.cache.restore("./_blog-cache");
     }
   },
