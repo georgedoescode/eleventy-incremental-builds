@@ -34,3 +34,9 @@ export default {
   },
 };
 </script>
+
+<style>
+body {
+  font-family: Georgia;
+}
+</style>
