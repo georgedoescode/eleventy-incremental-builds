@@ -38,6 +38,7 @@ module.exports = () => {
   const blogCache = readFromCache();
 
   if (blogCache.posts.length > 0) {
+    console.log(">>> Restoring posts from cache");
     const newData = {
       posts: res.posts,
     };
@@ -64,6 +65,8 @@ module.exports = () => {
   }
 
   writeToCache(res);
+
+  console.log(`>>> Fresh posts! ${res.posts}`);
 
   return res.posts;
 };
