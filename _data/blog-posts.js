@@ -57,14 +57,11 @@ module.exports = () => {
       ) {
         postsThatNeedToUpdate.push(post);
       } else {
-        console.log("running");
         // This post has not updated, restore it from the Netlify cache
         fse.copySync(
           `${CACHE_DIR}/posts/${post.slug}/`,
           `_site/blog/${post.slug}`
         );
-
-        console.log(fs.readdirSync("./_site"));
       }
     }
 
