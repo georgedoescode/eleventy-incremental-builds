@@ -37,7 +37,7 @@ module.exports = () => {
   const res = getPosts();
   const blogCache = readFromCache();
 
-  if (blogCache.posts.length > 0) {
+  if (blogCache && blogCache.posts.length > 0) {
     console.log(">>> Restoring posts from cache");
     const newData = {
       posts: res.posts,
