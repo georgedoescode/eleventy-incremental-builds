@@ -8,7 +8,7 @@
       <title>Document</title>
     </head>
     <body>
-      <main>Incremental Blog Builds</main>
+      <main><h1>Incremental Blog Builds</h1></main>
     </body>
   </html>
 </template>
