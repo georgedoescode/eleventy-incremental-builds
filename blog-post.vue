@@ -10,6 +10,7 @@
     <body>
       <main>
         <h1>{{ post.title }}</h1>
+        <p>{{ bigNumber.ms }}</p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit amet
           quam enim non laudantium ducimus, aspernatur sunt, qui deleniti eos
@@ -88,6 +89,8 @@
 </template>
 
 <script>
+import fibonacci from "fibonacci";
+
 export default {
   data() {
     return {
@@ -97,6 +100,7 @@ export default {
         alias: "post",
       },
       permalink: (data) => `blog/${data.post.slug}/index.html`,
+      bigNumber: fibonacci.iterate(2000),
     };
   },
 };
