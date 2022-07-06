@@ -1,9 +1,9 @@
 const posts = [
   {
     _id: "0",
-    title: "Blog Post 1",
+    title: "Blog Post 1 Update",
     slug: "/blog-post-1/",
-    lastUpdated: "2021-01-08",
+    lastUpdated: "2021-01-09",
   },
   {
     _id: "1",
