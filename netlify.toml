@@ -4,3 +4,8 @@
 
 [[plugins]]
   package = "./plugins/blog-cache"
+
+  package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "_site"
