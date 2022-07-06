@@ -5,6 +5,7 @@
 [[plugins]]
   package = "./plugins/blog-cache"
 
+[[plugins]]
   package = "@netlify/plugin-sitemap"
 
   [plugins.inputs]
