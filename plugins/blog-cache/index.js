@@ -17,14 +17,18 @@ module.exports = {
 
     await utils.cache.save("./_blog-cache");
 
-    // Ensure all the posts exist, otherwise fail the build
-    const allSiteSlugs = fs.readdirSync("./_site/blog").map((s) => `/${s}/`);
-    const allSlugs = getPosts().posts.map((post) => post.slug);
+    if (fs.existsSync("./_site/blog")) {
+      // Ensure all the posts exist, otherwise fail the build
+      const allSiteSlugs = fs.readdirSync("./_site/blog").map((s) => `/${s}/`);
+      const allSlugs = getPosts().posts.map((post) => post.slug);
 
-    const allPostsWritten = allSlugs.every((s) => allSiteSlugs.includes(s));
+      const allPostsWritten = allSlugs.every((s) => allSiteSlugs.includes(s));
 
-    if (!allPostsWritten) {
-      utils.build.failBuild("BUIlD FAILURE - SOME BLOG POSTS FAILED TO BUILD");
+      if (!allPostsWritten) {
+        utils.build.failBuild(
+          "BUIlD FAILURE - SOME BLOG POSTS FAILED TO BUILD"
+        );
+      }
     }
   },
 };
