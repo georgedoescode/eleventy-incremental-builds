@@ -58,7 +58,6 @@ module.exports = () => {
       ) {
         postsThatNeedToUpdate.push(post);
       } else {
-        console.log("Attempting to copy...");
         // This post has not updated, restore it from the Netlify cache
         fse.copySync(
           `${CACHE_DIR}/posts/${post.slug}/`,
