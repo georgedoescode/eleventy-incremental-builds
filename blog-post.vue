@@ -29,7 +29,7 @@ export default {
         alias: "post",
       },
       permalink: (data) => `blog/${data.post.slug}/index.html`,
-      bigNumber: fibonacci.iterate(4000),
+      bigNumber: fibonacci.iterate(100),
     };
   },
 };
