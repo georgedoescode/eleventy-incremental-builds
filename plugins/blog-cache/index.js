@@ -13,11 +13,11 @@ module.exports = {
   },
 
   async onPostBuild({ utils }) {
-    fse.copySync("./_site/blog", "./_blog-cache/posts");
-
-    await utils.cache.save("./_blog-cache");
-
     if (fs.existsSync("./_site/blog")) {
+      fse.copySync("./_site/blog", "./_blog-cache/posts");
+
+      await utils.cache.save("./_blog-cache");
+
       // Ensure all the posts exist, otherwise fail the build
       const allSiteSlugs = fs.readdirSync("./_site/blog").map((s) => `/${s}/`);
       const allSlugs = getPosts().posts.map((post) => post.slug);
