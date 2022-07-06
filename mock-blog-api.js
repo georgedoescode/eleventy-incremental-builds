@@ -5,6 +5,12 @@ const posts = [
     slug: "/blog-post-1/",
     lastUpdated: "2021-01-08",
   },
+  {
+    _id: "1",
+    title: "Blog Post 2",
+    slug: "/blog-post-2/",
+    lastUpdated: "2021-01-08",
+  },
 ];
 
 // const posts = [...Array(1024)].map((p, index) => {
