@@ -8,7 +8,14 @@
       <title>Document</title>
     </head>
     <body>
-      <main><h1>Incremental Blog Builds</h1></main>
+      <main>
+        <h1>Incremental Blog Builds</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+          debitis laboriosam praesentium commodi neque consequatur beatae nulla
+          officiis nisi dolores. Ipsam, impedit. Possimus, delectus.
+        </p>
+      </main>
     </body>
   </html>
 </template>
